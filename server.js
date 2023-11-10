@@ -11,6 +11,7 @@ const io = new Server(httpServer, {
   },
 });
 
+io.use(cors())
 let userInfo = [];
 
 io.on("connection", (socket) => {
