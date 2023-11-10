@@ -6,7 +6,7 @@ const cors = require("cors");
 const httpServer = createServer();
 const io = new Server(httpServer, {
   cors: {
-    origin: "*",
+    origin: "http://localhost:3002/",
     credentials: true,
   },
 });
