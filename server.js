@@ -2,7 +2,7 @@
 const { createServer } = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
-
+let port= process.env.PORT||4001
 const httpServer = createServer();
 const io = new Server(httpServer, {
   cors: {
@@ -68,6 +68,6 @@ io.on("connection", (socket) => {
   });
 });
 
-httpServer.listen(4001, () => {
-  console.log("Server is running on port 4001");
+httpServer.listen(port, () => {
+  console.log("Server is running on port ",port);
 });
